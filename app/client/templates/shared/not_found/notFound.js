@@ -197,7 +197,7 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
       Fruits.insert({
         userid: 4,
-        orderdata: ki,
+        orderdata: retrievedObject,
         ordernames: names,
         ordernumber: telephonenumber,
         orderarea: area,
