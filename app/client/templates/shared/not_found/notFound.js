@@ -178,7 +178,6 @@ var retrievedObject = localStorage.getItem('testObject');
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
   },
   'click #cart': function() {
-  	alert('shopping cart list');
   	var retrievedObject = localStorage.getItem('testObject');
     var ki = JSON.parse(retrievedObject);
     $("#sk").empty();
