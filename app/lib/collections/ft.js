@@ -11,6 +11,7 @@ Pc = new Mongo.Collection('pc');
 Invites = new Mongo.Collection('invites');
 Ja = new Mongo.Collection('ja');
 Orders = new Mongo.Collection('orders');
+Fruits = new Mongo.Collection('fruits');
 Payments = new Mongo.Collection('payments');
 Dl = new Mongo.Collection('dl');
 Al = new Mongo.Collection('al');
@@ -111,7 +112,7 @@ Schema.Invites = new SimpleSchema({
     },
     invitejobid : {
     label: "Discovery Type",
-    optional: false,
+    optional: true,
     type: String,
     autoform: {
          class:""
@@ -177,20 +178,51 @@ Schema.Ja = new SimpleSchema({
 Ja.attachSchema(Schema.Ja);
 
 
-Schema.Orders = new SimpleSchema({
+Schema.Fruits = new SimpleSchema({
   
     userid : {
     label: "User id",
-    optional: false,
+    optional: true,
     type: String,
     autoform: {
         class:""
     }
     },
-    ordercategory : {
-    label: "Discovery Type",
-    optional: false,
-    allowedValues: ['JobSeekerDailySubscription','EmployerDailySubscription','JobSeekerWeeklyPromotion','BusinessWeeklyPromotion'],
+    orderdata : {
+    label: "Order Data",
+    optional: true,
+    type: String,
+    autoform: {
+         class:""
+    }
+    },
+    ordernames : {
+    label: "Order Names",
+    optional: true,
+    type: String,
+    autoform: {
+         class:""
+    }
+    },
+    ordernumber : {
+    label: "Order Data",
+    optional: true,
+    type: String,
+    autoform: {
+         class:""
+    }
+    },
+    orderarea : {
+    label: "Order Area",
+    optional: true,
+    type: String,
+    autoform: {
+         class:""
+    }
+    },
+     orderstatus : {
+    label: "Order Status",
+    optional: true,
     type: String,
     autoform: {
          class:""
@@ -206,7 +238,7 @@ Schema.Orders = new SimpleSchema({
     
    });
 
-Orders.attachSchema(Schema.Orders);
+Fruits.attachSchema(Schema.Fruits);
 
 
 Schema.Payments = new SimpleSchema({
@@ -221,7 +253,7 @@ Schema.Payments = new SimpleSchema({
     },
     premiumtype : {
     label: "Discovery Type",
-    optional: false,
+    optional: true,
     allowedValues: ['Mpesa','Paypal','Other'],
     type: String,
     autoform: {
@@ -617,6 +649,20 @@ if (Meteor.isServer) {
 
 
   Ft.allow({
+    insert: function (userId, doc) {
+      return false;
+    },
+
+    update: function (userId, doc, fieldNames, modifier) {
+      return false;
+    },
+
+    remove: function (userId, doc) {
+      return false;
+    }
+  });
+
+  Fruits.allow({
     insert: function (userId, doc) {
       return false;
     },

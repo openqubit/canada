@@ -195,7 +195,14 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject));
      var retrievedObject = localStorage.getItem('testObject');
      var ki = JSON.parse(retrievedObject);
 
-    Meteor.call('newfruitsorder', ki,names,telephonenumber,area);
+      Fruits.insert({
+        userid: 4,
+        orderdata: ki,
+        ordernames: names,
+        ordernumber: telephonenumber,
+        orderarea: area,
+        orderstatus: 'unpaid'
+    });
 
 // // Retrieve the object from storage
 // var retrievedObject = localStorage.getItem('testObject');
