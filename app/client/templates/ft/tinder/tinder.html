@@ -1,0 +1,1629 @@
+<template name="Tinder">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="line"></div>
+
+    <div class="logo-box">
+        <h2><img src="/img/ft.png" /></h2>
+        
+    </div>
+
+    <div class="list-block mt-15">
+        <div class="list-group">
+            <nav>
+                <ul>
+                    <li class="divider">
+                        Menu
+                    </li>
+                    <li>
+                        <a href="#view-1" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Dashboard</div>
+                                <div class="item-after">
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="#view-19" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-area-chart"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Graduates</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-20" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Highly Experienced</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-21" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-newspaper-o"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Specialized Skills</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-22" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-magic"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Anonymous Tasks</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#view-23" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Get Discovered</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#view-230" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-tachometer"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Get Discovered Preview</div>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="#view-24" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Posts</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#view-26" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-database toyellow"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title toyellow">Premium Candidates</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#view-270" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-save togreen"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title togreen">Premium Businesses</div>
+                            </div>
+                        </a>
+                    </li>
+                   
+                    <li class="divider">
+                        Social
+                    </li>
+                    <li>
+                        <a href="#view-27" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Twitter</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-28" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Facebook</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-29" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Linkedin</div>
+                                <div class="item-after">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="line"></div>
+
+    <div class="user-banner">
+        <span class="ava-box">
+            <img src="/img/ava4.jpg" alt="">
+        </span>
+    </div>
+
+    <div class="welcome-msg">
+        <h3>Hello <strong>Lu</strong>!</h3>
+        <h4>How is your day going?</h4>
+    </div>
+
+    <div class="list-block mt-15">
+        <div class="list-group">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#view-5" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Profile</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-6" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-cog"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Settings</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#view-8" class="item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title like">I Like It</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-9" class="tab-link item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Referals</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-10" class="item-link close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-sign-out"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title logout">Logout</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="list-group mt-20">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#view-111" class="tab-link item-link item-primary close-panel item-content">
+                            <div class="item-media">
+                                <i class="fa fa-info-circle"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">About FlashTasker</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    </div>
+    <!-- Views, and they are tabs-->
+    <!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+    <div class="views tabs toolbar-through">
+      <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+      <div id="view-1" class="view view-main tab active ">
+        <!-- Pages-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Dashboard</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="pages">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index-1" class="page bv">
+            <!-- Scrollable page content-->
+            <br/><br/>
+            <div class="page-content">
+              <nav class="dashboard-menu">
+                        <div class="row text-center">
+                            <div class="col-33">
+                                <a href="#view-11" class="tab-link menu-link">
+                                    <span class="icon-chef"></span>
+                                    <span>Restaurant</span>
+                                </a>
+                            </div>
+                            <div class="col-33">
+                                <a href="#view-12" class="tab-link menu-link">
+                                    <span class="icon-calendar-cross"></span>
+                                    <span>Events</span>
+                                </a>
+                            </div>
+                            <div class="col-33">
+                                <a href="#view-13" class="tab-link menu-link">
+                                    <span class="icon-pen2"></span>
+                                    <span>Grooming</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-33">
+                                <a href="#view-14" class="tab-link menu-link">
+                                    <span class="icon-picture"></span>
+                                    <span>Marketing</span>
+                                </a>
+                            </div>
+                            <div class="col-33">
+                                <a href="#view-15" class="tab-link menu-link">
+                                    <span class="icon-folder"></span>
+                                    <span>Industrial</span>
+                                </a>
+                            </div>
+                            <div class="col-33">
+                                <a href="#view-16"  class="tab-link menu-link">
+                                    <span class="icon-book"></span>
+                                    <span>Retail</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-33">
+                                <a href="#view-17" class="tab-link menu-link">
+                                    <span class="icon-share2"></span>
+                                    <span>Manual Work</span>
+                                    
+                                </a>
+                            </div>
+                            <div class="col-33">
+                                <a href="#view-18" class="tab-link menu-link">
+                                    <span class="icon-car"></span>
+                                    <span>Driving</span>
+                                </a>
+                            </div>
+                            <div class="col-33">
+                                <a href="#view-19" class="tab-link menu-link">
+                                    <span class="icon-pen"></span>
+                                    <span>Office</span>
+                                </a>
+                            </div>
+                        </div>
+                    </nav> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second view (for second wrap)-->
+      <div id="view-2" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Invites</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-2" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div id="view-4" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Payments</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-4" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div id="view-5" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Profile</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-5" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+              <div id="view-6" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Settings</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-6" class="page">
+            <div class="page-content">
+              <div class="content-block">
+              {{#if ex}}
+                {{> quickForm collection="Af" doc=cdoc id="updateSettings" omitFields="userid,paywallstatus,payment_start_of_validity,payment_end_of_validity"
+                class="settings" type="update" buttonContent="Update Settings"}}
+
+                {{else}}
+
+                 {{> quickForm collection="Af" doc=this id="updateSettings" omitFields="userid,paywallstatus,payment_start_of_validity,payment_end_of_validity" 
+                class="settings" type="insert" buttonContent="Insert Settings"}}
+
+                {{/if}}
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+        <div id="view-8" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">I Like It</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-8" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="view-9" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Referals</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-9" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <div id="view-10" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Logout</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-10" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="view-111" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">About FlashTasker</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-111" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <div id="view-11" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Restaurant</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-11" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="view-12" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Tinder</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-12" class="page">
+            <div class="page-content">
+            
+            <div class="content-block">
+                {{> quickForm collection="Ti" id="insertBookForm" type="insert"}}
+              </div>
+
+              <div class="content-block">
+                {{> reactiveTable settings=settings}}
+              </div>
+              <div class="list-block">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <div id="view-13" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Grooming</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-13" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                
+              </div>
+              <div class="list-block">
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+        <div id="view-14" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Marketing</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-14" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <h1>Create New Document</h1>
+                     {{> quickForm collection="Pp" doc=this id="insertdocument" class="pp" type="insert" buttonContent="Create Document"}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="view-15" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Industrial</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-15" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <div id="view-230" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Get Discovered Preview</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-230" class="page">
+            <div class="page-content">
+              <div class="content-block">
+               <div class="card facebook-card">
+  <div class="card-header">
+    <div class="facebook-avatar"><img src="http://192.168.43.160:3000/img/celm.jpeg" width="100" height="80"></div>
+    <div class="facebook-name">Female Unskilled Job Seeker</div>
+  </div>
+  <div class="card-content">
+    <div class="card-content-inner">
+      <p>What a nice photo i took yesterday!Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo.</p>
+      <p class="color-gray ">Likes: <span class="togreen">112</span></p>
+    </div>
+  </div>
+  <div class="card-footer footerbg">
+    <a href="#" class="towhite link">Like</a>
+    <a href="#" class="towhite link">Invite</a>
+    <a href="#" class="link togreen">Next</a>
+  </div>
+</div>   
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <div id="view-16" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Retail</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-16" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+        <div id="view-17" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Manual Work</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-17" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="view-18" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Driving</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-18" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <div id="view-19" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold" id="logout-button">Graduates</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-19" class="page">
+            <div class="page-content">
+              <!-- List View -->
+<div class="content-block-title"><div class="row">
+		  <div class="col-70">
+		  <br/>
+		    <span class="refresh"> *New Graduates Jobs</span>
+		  </div>
+		  <div class="col-30">
+		    <a href="#" class="button button-big bgred refresh">Reload</a>
+		  </div>
+		</div></div>
+<div class="list-block accordion-list">
+  <ul>
+    <li class="accordion-item"><a href="#" class="item-content item-link">
+    <div class="item-media"><i class="fa fa-home tored"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Graphic Designer</div>
+          
+          <div class="item-after">High Priority</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+           <span class="badge badge-primary success">5 Positions Available</span>
+           <span class="badge badge-primary danger">4 hours remaining</span>
+           <hr/>
+          <p>Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...</p>
+          
+          <div class="row">
+		  <div class="col-70">
+		    
+		  </div>
+		  <div class="col-30">
+		    <a href="#" class="button button-big bgred">Apply</a>
+		  </div>
+		</div>     
+          <hr/>
+        </div>
+      </div>
+    </li>
+    <li class="accordion-item"><a href="#" class="item-content item-link">
+    <div class="item-media"><i class="fa fa-cog tored"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Accountant Wanted</div>
+          <div class="item-after">High Priority</div>
+
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+          <p>Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...Item 1 content. Lorem ipsum dolor sit amet...</p>
+          
+          <div class="row">
+		  <div class="col-70">
+		    
+		  </div>
+		  <div class="col-30">
+		    <a href="#" class="button button-big bgred">Apply</a>
+		  </div>
+		</div>     
+          <hr/>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+        <div id="view-20" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Highly Experienced</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-20" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="view-21" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Specialized Skills</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-21" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <div id="view-22" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Anonymous Tasks</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-22" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+        <div id="view-23" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Get Discovered</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-23" class="page">
+            <div class="page-content">
+              <div class="content-block">
+              {{#if pc}}
+                {{> quickForm collection="Pc" doc=discovery id="updateDiscovery" omitFields="userid"
+                class="settings" type="update" buttonContent="Update Discovery Settings"}}
+
+                {{else}}
+
+                 {{> quickForm collection="Pc" doc=this id="insertDiscovery" omitFields="userid" 
+                class="settings" type="insert" buttonContent="Insert Discovery Settings"}}
+
+                {{/if}}
+
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="view-24" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Post A Job</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-24" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                {{> quickForm collection="Ft" doc=this id="insertjob" omitFields="dateposted,ipaddress,timezone,region,city,employerid,country,longitude,latitude"
+                class="postjob" type="insert" buttonContent="Create Job"}}
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <div id="view-26" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Premium Candindates</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-26" class="page">
+            <div class="page-content">
+             <div class="content-block">
+               <div class="card facebook-card">
+  <div class="card-header">
+    <div class="facebook-avatar"><img src="http://192.168.43.160:3000/img/celm.jpeg" width="100" height="80"></div>
+    <div class="facebook-name">Female Unskilled Job Seeker</div>
+  </div>
+  <div class="card-content">
+    <div class="card-content-inner">
+      <p>What a nice photo i took yesterday!Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo.</p>
+      <p class="color-gray ">Likes: <span class="togreen">112</span></p>
+    </div>
+  </div>
+  <div class="card-footer footerbg">
+    <a href="#" class="towhite link">Like</a>
+    <a href="#" class="towhite link">Invite</a>
+    <a href="#" class="link togreen">Next</a>
+  </div>
+</div>   
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <div id="view-270" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Premium Businesses</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-270" class="page">
+            <div class="page-content">
+              <div class="content-block">
+               <div class="card facebook-card">
+  <div class="card-header">
+    <div class="facebook-avatar"><img src="http://192.168.43.160:3000/img/celm.jpeg" width="100" height="80"></div>
+    <div class="facebook-name">Female Unskilled Job Seeker</div>
+  </div>
+  <div class="card-content">
+    <div class="card-content-inner">
+      <p>What a nice photo i took yesterday!Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo.</p>
+      <p class="color-gray ">Likes: <span class="togreen">112</span></p>
+    </div>
+  </div>
+  <div class="card-footer footerbg">
+    <a href="#" class="towhite link">Like</a>
+    <a href="#" class="towhite link">Invite</a>
+    <a href="#" class="link togreen">Next</a>
+  </div>
+</div>   
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+        <div id="view-27" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Twitter</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-27" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="view-28" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Facebook</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-28" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <div id="view-29" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Linkedin</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-29" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <div id="view-30" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner bb">
+          <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
+            </div>
+            <div class="center sliding gobold">Linkedin</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-30" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About Us</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Tabbar-->
+      <div class="toolbar tabbar tabbar-labels bb">
+        <div class="toolbar-inner">
+
+        <a href="#view-1" class="tab-link active"> <i class="towhite ikn icon-graph"></i><span class="tabbar-label toblack">Home</span></a>
+
+        <a href="#view-2" class="tab-link"><i class="towhite ikn icon-chair"></i><span class="tabbar-label towhite">Invites</span></a>
+
+        <a href="#view-4" class="tab-link"> <i class="payments ikn icon-cog"></i><span class="tabbar-label payments">Payments</span></a>
+
+        </div>
+      </div>
+    </div>
+
+</template>
