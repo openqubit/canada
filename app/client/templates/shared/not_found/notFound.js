@@ -195,7 +195,7 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject));
      var retrievedObject = localStorage.getItem('testObject');
      var ki = JSON.parse(retrievedObject);
 
-      Orders.insert({
+      Fruits.insert({
         userid: 4,
         orderdata: ki,
         ordernames: names,
