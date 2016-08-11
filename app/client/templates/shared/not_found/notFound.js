@@ -185,7 +185,7 @@ Template.NotFound.onCreated(function () {
 });
 
 Template.NotFound.onRendered(function () {
-  var testObject = { 'shopping': 0, 'cart': 0};
+  var testObject = { 'Total Amount': 0, 'Total Items': 0};
   localStorage.setItem('testObject', JSON.stringify(testObject));
 });
 
