@@ -205,17 +205,26 @@ Template.NotFound.onRendered(function () {
   var testObject = { 'Total Amount': 0, 'Total Items': 0};
   localStorage.setItem('testObject', JSON.stringify(testObject));
 
-  // Select your input element.
-var numInput = document.querySelector('input');
+var myInput = document.getElementsByTagName('input')[0];
+myInput.addEventListener('keypress', function(e) {
+  var key = !isNaN(e.charCode) ? e.charCode : e.keyCode;
+  function keyAllowed() {
+    var keys = [8,9,13,16,17,18,19,20,27,46,48,49,50,
+                51,52,53,54,55,56,57,91,92,93];
+    if (key && keys.indexOf(key) === -1)
+      return false;
+    else
+      return true;
+  }
+  if (!keyAllowed())
+    e.preventDefault();
+}, false);
 
-// Listen for input event on numInput.
-numInput.addEventListener('input', function(){
-    // Let's match only digits.
-    var num = this.value.match(/^\d+$/);
-    if (num === null) {
-        // If we have no match, value will be empty.
-        this.value = "";
-    }
+// EDIT: Disallow pasting non-number content
+myInput.addEventListener('paste', function(e) {
+  var pasteData = e.clipboardData.getData('text/plain');
+  if (pasteData.match(/[^0-9]/))
+    e.preventDefault();
 }, false);
 
 
