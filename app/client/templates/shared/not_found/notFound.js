@@ -186,6 +186,28 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject));
    	$("#sk").append("<li><a href='#'' class='item-link'><div class='item-content'><div class='item-inner'><div class='item-title'>"+index+"-----Amount Charged  "+value+"</div></div></div></a></li>");
   console.log(index+"  "+value);
 });
+  },
+  'click #gobuy': function() {
+     var telephonenumber = $('#telephonenumber').val();
+     var names = $('#names').val();
+     var area = $('#area').val();
+
+     var retrievedObject = localStorage.getItem('testObject');
+     var ki = JSON.parse(retrievedObject);
+
+      Orders.insert({
+        userid: 4,
+        orderdata: ki,
+        ordernames: names,
+        ordernumber: telephonenumber,
+        orderarea: area,
+        orderstatus: 'unpaid'
+    });
+
+// // Retrieve the object from storage
+// var retrievedObject = localStorage.getItem('testObject');
+
+// console.log('retrievedObject: ', JSON.parse(retrievedObject));
   }
 });
 
