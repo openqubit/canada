@@ -204,6 +204,21 @@ Template.NotFound.onCreated(function () {
 Template.NotFound.onRendered(function () {
   var testObject = { 'Total Amount': 0, 'Total Items': 0};
   localStorage.setItem('testObject', JSON.stringify(testObject));
+
+  // Select your input element.
+var numInput = document.querySelector('input');
+
+// Listen for input event on numInput.
+numInput.addEventListener('input', function(){
+    // Let's match only digits.
+    var num = this.value.match(/^\d+$/);
+    if (num === null) {
+        // If we have no match, value will be empty.
+        this.value = "";
+    }
+}, false);
+
+
 });
 
 Template.NotFound.onDestroyed(function () {
