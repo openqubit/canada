@@ -7,6 +7,10 @@ Meteor.publish('ft', function () {
   return Ft.find();
 });
 
+Meteor.publish('fruits', function () {
+  return Fruits.find();
+});
+
 Meteor.publish('af', function () {
   return Af.find();
 });
