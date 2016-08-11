@@ -6,7 +6,10 @@ Template.NotFound.events({
      
   },
   	'click #bananas': function() {
+      
      var bv = $('#bananaval').val();
+     var price = 10;
+     var bv = price * parseInt(bv);
        var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -24,6 +27,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
   },
   'click #mango': function() {
      var bv = $('#mangoval').val();
+     var price = 30;
+     var bv = price * parseInt(bv);
        var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -41,6 +46,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
   },
   'click #tomato': function() {
      var bv = $('#tomatoval').val();
+     var price = 20;
+     var bv = price * parseInt(bv);
       var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -58,6 +65,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
   },
   'click #avocado': function() {
      var bv = $('#avocadoval').val();
+     var price = 30;
+     var bv = price * parseInt(bv);
        var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -75,6 +84,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
   },
   'click #onion': function() {
      var bv = $('#onionval').val();
+     var price = 50;
+     var bv = price * parseInt(bv);
        var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -92,6 +103,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
   },
   'click #tomato': function() {
      var bv = $('#tomatoval').val();
+     var price = 50;
+     var bv = price * parseInt(bv);
       var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -108,6 +121,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
 // console.log('retrievedObject: ', JSON.parse(retrievedObject));
   },
     'click #grapes': function() {
+      var price = 100;
+     var bv = price * parseInt(bv);
      var bv = $('#grapesval').val();
        var go = localStorage.getItem('testObject');
 
@@ -126,6 +141,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
   },
   'click #peaches': function() {
      var bv = $('#peachesval').val();
+     var price = 200;
+     var bv = price * parseInt(bv);
        var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -143,7 +160,8 @@ localStorage.setItem('testObject', JSON.stringify(newObject));
   },
   'click #apples': function() {
      var bv = $('#applesval').val();
-
+     var price = 100;
+     var bv = price * parseInt(bv);
        var go = localStorage.getItem('testObject');
 
        var testObject = JSON.parse(go);
@@ -166,7 +184,7 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject));
     $("#sk").empty();
    $.each(ki, function (index, value) {
 
-   	$("#sk").append("<li><a href='#'' class='item-link'><div class='item-content'><div class='item-inner'><div class='item-title'>"+index+"-----Quantity  "+value+"<br/>------Total Amount  "+value+"</div></div></div></a></li>");
+   	$("#sk").append("<li><a href='#'' class='item-link'><div class='item-content'><div class='item-inner'><div class='item-title'>"+index+"-----Quantity  "+value+"</div></div></div></a></li>");
   console.log(index+"  "+value);
 });
   }
