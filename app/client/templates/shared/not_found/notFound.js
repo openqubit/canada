@@ -184,7 +184,7 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject));
     $("#sk").empty();
    $.each(ki, function (index, value) {
 
-   	$("#sk").append("<li><a href='#'' class='item-link'><div class='item-content'><div class='item-inner'><div class='item-title'>"+index+"-----Quantity  "+value+"</div></div></div></a></li>");
+   	$("#sk").append("<li><a href='#'' class='item-link'><div class='item-content'><div class='item-inner'><div class='item-title'>"+index+"-----Amount Charged  "+value+"</div></div></div></a></li>");
   console.log(index+"  "+value);
 });
   }
