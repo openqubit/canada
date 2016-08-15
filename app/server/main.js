@@ -1,7 +1,6 @@
-if (Meteor.isClient) {
-  var MAP_ZOOM = 15;
+import { Meteor } from 'meteor/meteor';
 
-  Meteor.startup(function() {
-    GoogleMaps.load();
-  });
-}
+
+Meteor.startup(() => {
+  // code to run on server at startup
+});
