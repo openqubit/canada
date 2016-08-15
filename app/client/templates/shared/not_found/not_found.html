@@ -158,7 +158,11 @@
             <div class="page-content">
               <nav class="dashboard-menu">
                 <div id="map" class="map-container">
-    
+                {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
                 </div>
                     </nav> 
             </div>
