@@ -218,6 +218,32 @@ Template.NotFound.onCreated(function () {
 });
 
 Template.NotFound.onRendered(function () {
+	
+	$.getJSON("https://freegeoip.net/json/", function(data) {
+
+navigator.geolocation.getCurrentPosition(function (pos) {
+            var lat = pos.coords.latitude;
+            var lng = pos.coords.longitude;
+           
+    var latitude = data.latitude;
+    var longitude = data.longitude;
+    
+    var myLatLng = new google.maps.LatLng(lat,lng);
+    var map = new google.maps.Map(document.getElementById("map"),
+    {
+        zoom: 15,
+        center: myLatLng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var marker = new google.maps.Marker(
+    {
+        position: myLatLng,
+        map: map,
+        title: 'clicked'
+    });
+});
+});
 
   var testObject = { 'Total Amount': 0, 'Total Items': 0};
   localStorage.setItem('testObject', JSON.stringify(testObject));
