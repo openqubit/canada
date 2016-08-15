@@ -3,6 +3,11 @@
 .bg{
   background-color:#708090 !important;
 }
+.map-container {
+  width: 800px;
+  max-width: 100%;
+  height: 500px;
+}
 .footerbg{
   background-color:#3f51b5;
   color:white !important;
