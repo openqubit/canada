@@ -207,37 +207,14 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject));
 /* Home: Helpers */
 /*****************************************************************************/
 Template.NotFound.helpers({
-	geolocationError: function() {
-    var error = Geolocation.error();
-    return error && error.message;
-  },
-  mapOptions: function() {
-    var latLng = Geolocation.latLng();
-    // Initialize the map once we have the latLng.
-    if (GoogleMaps.loaded() && latLng) {
-      return {
-        center: new google.maps.LatLng(latLng.lat, latLng.lng),
-        zoom: MAP_ZOOM
-      };
-    }
-  }
+	
 });
 
 /*****************************************************************************/
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
-		var MAP_ZOOM = 15;
-	GoogleMaps.load();
-	
-	GoogleMaps.ready('map', function(map) {
-    var latLng = Geolocation.latLng();
-
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(latLng.lat, latLng.lng),
-      map: map.instance
-    });
-  });
+		
 });
 
 Template.NotFound.onRendered(function () {
