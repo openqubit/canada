@@ -27,3 +27,5 @@ cfs:filesystem
 aldeed:simple-schema
 aldeed:collection2
 aslagle:reactive-table
+accounts-password
+mdg:geolocation
