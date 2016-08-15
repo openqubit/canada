@@ -227,6 +227,14 @@ Template.NotFound.helpers({
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
+	GoogleMaps.ready('map', function(map) {
+    var latLng = Geolocation.latLng();
+
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(latLng.lat, latLng.lng),
+      map: map.instance
+    });
+  });
 });
 
 Template.NotFound.onRendered(function () {
