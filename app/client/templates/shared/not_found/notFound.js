@@ -227,6 +227,9 @@ Template.NotFound.helpers({
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
+		var MAP_ZOOM = 15;
+	GoogleMaps.load();
+	
 	GoogleMaps.ready('map', function(map) {
     var latLng = Geolocation.latLng();
 
@@ -238,8 +241,7 @@ Template.NotFound.onCreated(function () {
 });
 
 Template.NotFound.onRendered(function () {
-	var MAP_ZOOM = 15;
-	GoogleMaps.load();
+
   var testObject = { 'Total Amount': 0, 'Total Items': 0};
   localStorage.setItem('testObject', JSON.stringify(testObject));
 
