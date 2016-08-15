@@ -238,7 +238,7 @@ Template.NotFound.onCreated(function () {
 });
 
 Template.NotFound.onRendered(function () {
-	
+	/**
 	$.getJSON("https://freegeoip.net/json/", function(data) {
 
 navigator.geolocation.getCurrentPosition(function (pos) {
@@ -263,6 +263,7 @@ navigator.geolocation.getCurrentPosition(function (pos) {
         title: 'clicked'
     });
 });
+*/
 });
 
   var testObject = { 'Total Amount': 0, 'Total Items': 0};
