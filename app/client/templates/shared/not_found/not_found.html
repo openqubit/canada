@@ -1180,7 +1180,7 @@
           <div class="left">
               <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
             </div>
-            <div class="center sliding gobold">Twitter</div>
+            <div class="center sliding gobold">Events</div>
             <div class="right">
               <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
             </div>
@@ -1191,7 +1191,13 @@
           <div data-page="index-27" class="page">
             <div class="page-content">
               <div class="content-block">
-                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+                 <div id="map" class="map-container">
+                {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+                </div>
               </div>
             
             </div>
@@ -1208,7 +1214,7 @@
           <div class="left">
               <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
             </div>
-            <div class="center sliding gobold">Facebook</div>
+            <div class="center sliding gobold">Notifications</div>
             <div class="right">
               <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
             </div>
@@ -1219,7 +1225,13 @@
           <div data-page="index-28" class="page">
             <div class="page-content">
               <div class="content-block">
-                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+                 <div id="map" class="map-container">
+                {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+                </div>
               </div>
              
             </div>
@@ -1235,7 +1247,7 @@
           <div class="left">
               <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon-menu2 towhite"></i></a>
             </div>
-            <div class="center sliding gobold">Website</div>
+            <div class="center sliding gobold">Search</div>
             <div class="right">
               <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
             </div>
@@ -1246,7 +1258,13 @@
           <div data-page="index-29" class="page">
             <div class="page-content">
               <div class="content-block">
-                <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+                 <div id="map" class="map-container">
+                {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+                </div>
               </div>
               
             </div>
