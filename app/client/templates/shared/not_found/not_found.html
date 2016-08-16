@@ -8,7 +8,7 @@
       <div class="line"></div>
 
     <div class="logo-box">
-        <h2 style="font-weight:bold">FruitVille</h2>
+        <h2 style="font-weight:bold">XruitVille</h2>
         
     </div>
 
@@ -143,14 +143,12 @@
             </div>
             <div class="center sliding gobold">Dashboard</div>
             <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only"> <i class="towhite fa fa-map-marker"></i></a>
             </div>
           </div>
         </div>
    <style type="text/css">
-   .bv{
-    background-image: url("/img/2.jpg");
-    }
+
     </style>
         <div class="pages">
           <!-- Page, data-page contains page name-->
@@ -159,62 +157,13 @@
             <br/><br/>
             <div class="page-content">
               <nav class="dashboard-menu">
-                        <div class="row text-center">
-                            <div class="col-33">
-                                <a href="#view-11" class="tab-link menu-link">
-                                    <span class="icon-chef"></span>
-                                    <span>Bananas</span>
-                                </a>
-                            </div>
-                            <div class="col-33">
-                                <a href="#view-12" class="tab-link menu-link">
-                                    <span class="icon-calendar-cross"></span>
-                                    <span>Mangoes</span>
-                                </a>
-                            </div>
-                            <div class="col-33">
-                                <a href="#view-13" class="tab-link menu-link">
-                                    <span class="icon-pen2"></span>
-                                    <span>Tomatoes</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-33">
-                                <a href="#view-14" class="tab-link menu-link">
-                                    <span class="icon-picture"></span>
-                                    <span>Avocados</span>
-                                </a>
-                            </div>
-                            <div class="col-33">
-                                <a href="#view-15" class="tab-link menu-link">
-                                    <span class="icon-folder"></span>
-                                    <span>Onions</span>
-                                </a>
-                            </div>
-                            <div class="col-33">
-                                <a href="#view-16"  class="tab-link menu-link">
-                                    <span class="icon-book"></span>
-                                    <span>Grapes</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-33">
-                                <a href="#view-17" class="tab-link menu-link">
-                                    <span class="icon-share2"></span>
-                                    <span>Peaches</span>
-                                    
-                                </a>
-                            </div>
-                            <div class="col-33">
-                                <a href="#view-18" class="tab-link menu-link">
-                                    <span class="icon-car"></span>
-                                    <span>Apples</span>
-                                </a>
-                            </div>
-                         
-                        </div>
+                <div id="map" class="map-container">
+                {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+                </div>
                     </nav> 
             </div>
           </div>
@@ -230,7 +179,7 @@
             </div>
             <div class="center sliding gobold">Cart</div>
             <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only open-panel"> <i class="towhite icon-user"></i></a>
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right" class="link icon-only"> <i class="towhite map-marker"></i></a>
             </div>
 
           </div>
