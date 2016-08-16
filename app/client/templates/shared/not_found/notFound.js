@@ -9,6 +9,7 @@ if (Meteor.isClient) {
     key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
   });
 });
+}
 
 Template.NotFound.events({
 	'click .item-title': function() {
