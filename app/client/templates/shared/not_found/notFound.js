@@ -1,6 +1,15 @@
 /*****************************************************************************/
 /* Home: Event Handlers */
 /*****************************************************************************/
+if (Meteor.isClient) {
+  var MAP_ZOOM = 15;
+
+ Meteor.startup(function() {  
+  GoogleMaps.load({
+    key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
+  });
+});
+
 Template.NotFound.events({
 	'click .item-title': function() {
      
