@@ -263,8 +263,8 @@ navigator.geolocation.getCurrentPosition(function (pos) {
         title: 'clicked'
     });
 });
-*/
 });
+*/
 
   var testObject = { 'Total Amount': 0, 'Total Items': 0};
   localStorage.setItem('testObject', JSON.stringify(testObject));
