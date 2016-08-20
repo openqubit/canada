@@ -75,28 +75,34 @@ var myApp = new Framework7();
 var $$ = Dom7;
  
   myApp.modal({
-    title:  'Vertical Buttons Layout',
-    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
+    title:  'GeoCanada Login Service',
+    text: 'Login With Any Of The Methods Provided',
     verticalButtons: true,
     buttons: [
       {
-        text: 'Button 1',
+        text: 'Google',
         onClick: function() {
-          myApp.alert('You clicked first button!')
+          myApp.alert('Success!,logged in with Google.')
         }
       },
       {
-        text: 'Button 2',
+        text: 'Google+',
         onClick: function() {
-          myApp.alert('You clicked second button!')
+          myApp.alert('Success!,logged in with Google+.')
         }
       },
       {
-        text: 'Button 3',
+        text: 'Facebook',
         onClick: function() {
-          myApp.alert('You clicked third button!')
+          myApp.alert('Success!,logged in with Facebook.')
         }
       },
+      {
+        text: 'Twitter',
+        onClick: function() {
+          myApp.alert('Success!,logged in with Twitter.')
+        }
+      }
     ]
   })
 
