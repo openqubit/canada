@@ -86,12 +86,16 @@ var $$ = Dom7;
       	title: 'Google',
         text: '<i class="fa fa-google" aria-hidden="true"> Google</i>',
         onClick: function() {
-          Meteor.loginWithGoogle();
-          if (Meteor.loggingIn()) {
-            alert('logged in');
-        } else {
-       document.location.reload(true);
-         }
+          Meteor.loginWithGoogle({
+        requestPermissions: ['email']
+       }, function(error) {
+      if (error) {
+    console.log(error); //If there is any error, will get error here
+    document.location.reload(true);
+     }else{
+    console.log(Meteor.user());// If there is successful login, you will get login details here
+     }
+     });
         }
       },
       {
