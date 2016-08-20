@@ -13,7 +13,11 @@ if (Meteor.isClient) {
 
 Template.NotFound.events({
 'click #logout': function(){
-    alert("You have been logged out!");
+  var myApp = new Framework7();
+     myApp.showPreloader('Logout Successful')
+    setTimeout(function () {
+        myApp.hidePreloader();
+    }, 2000);
 }	
 });
 
