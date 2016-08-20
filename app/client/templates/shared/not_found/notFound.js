@@ -18,6 +18,7 @@ Template.NotFound.events({
     setTimeout(function () {
         myApp.hidePreloader();
     }, 2000);
+    document.location.reload(true);
 }	
 });
 
