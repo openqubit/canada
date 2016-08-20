@@ -83,7 +83,7 @@ var $$ = Dom7;
       	title: 'Google',
         text: '<i class="fa fa-google" aria-hidden="true"> Google</i>',
         onClick: function() {
-          myApp.alert('Success!,logged in with Google.')
+          myApp.modal('Success!,logged in with Google.')
         }
       },
       {
