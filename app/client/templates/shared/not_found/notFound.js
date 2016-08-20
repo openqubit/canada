@@ -89,28 +89,44 @@ var $$ = Dom7;
       	title: 'Google',
         text: '<i class="fa fa-google" aria-hidden="true"> Google</i>',
         onClick: function() {
-          myApp.alert('Success!,logged in with Google.')
+            var myApp = new Framework7();
+     myApp.showPreloader('Success!,logged in with Google.')
+    setTimeout(function () {
+        myApp.hidePreloader();
+    }, 2000);
         }
       },
       {
       	title: 'Google+',
         text: '<i class="fa fa-google-plus" aria-hidden="true"> Google+</i>',
         onClick: function() {
-          myApp.alert('Success!,logged in with Google+.')
+          var myApp = new Framework7();
+     myApp.showPreloader('Success!,logged in with Google+.')
+    setTimeout(function () {
+        myApp.hidePreloader();
+    }, 2000);
         }
       },
       {
       	title: 'Facebook',
         text: '<i class="fa fa-facebook-official" aria-hidden="true"> Facebook</i>',
         onClick: function() {
-          myApp.alert('Success!,logged in with Facebook.')
+          var myApp = new Framework7();
+     myApp.showPreloader('Success!,logged in with Facebook.')
+    setTimeout(function () {
+        myApp.hidePreloader();
+    }, 2000);
         }
       },
       {
       	title: 'Twitter',
         text: '<i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i>',
         onClick: function() {
-          myApp.alert('Success!,logged in with Twitter.')
+          var myApp = new Framework7();
+     myApp.showPreloader('Success!,logged in with Twitter.')
+    setTimeout(function () {
+        myApp.hidePreloader();
+    }, 2000);
         }
       }
     ]
