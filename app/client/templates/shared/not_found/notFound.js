@@ -18,7 +18,6 @@ Template.NotFound.events({
     setTimeout(function () {
         myApp.hidePreloader();
     }, 2000);
-    $("#lo").addClass("close-panel");
 }	
 });
 
