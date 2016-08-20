@@ -101,11 +101,7 @@ var $$ = Dom7;
       	title: 'Facebook',
         text: '<i class="fa fa-facebook-official" aria-hidden="true"> Facebook</i>',
         onClick: function() {
-          var myApp = new Framework7();
-     myApp.showPreloader('Success!,logged in with Facebook.')
-    setTimeout(function () {
-        myApp.hidePreloader();
-    }, 2000);
+          Meteor.loginWithFacebook();
         }
       },
       {
