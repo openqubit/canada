@@ -86,19 +86,19 @@ var $$ = Dom7;
         }
       },
       {
-        text: 'Google+',
+        text: '<i class="fa fa-google-plus" aria-hidden="true"> Google+</i>',
         onClick: function() {
           myApp.alert('Success!,logged in with Google+.')
         }
       },
       {
-        text: 'Facebook',
+        text: '<i class="fa fa-facebook-official" aria-hidden="true"> Facebook</i>',
         onClick: function() {
           myApp.alert('Success!,logged in with Facebook.')
         }
       },
       {
-        text: 'Twitter',
+        text: '<i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i>',
         onClick: function() {
           myApp.alert('Success!,logged in with Twitter.')
         }
