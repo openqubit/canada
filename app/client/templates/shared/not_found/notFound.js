@@ -87,7 +87,8 @@ var $$ = Dom7;
         text: '<i class="fa fa-google" aria-hidden="true"> Google</i>',
         onClick: function() {
           Meteor.loginWithGoogle();
-          if (Meteor.user()) {
+          if (Meteor.loggingIn()) {
+            alert('logged in');
         } else {
        document.location.reload(true);
          }
