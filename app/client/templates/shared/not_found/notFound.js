@@ -98,17 +98,6 @@ var $$ = Dom7;
         }
       },
       {
-      	title: 'Google+',
-        text: '<i class="fa fa-google-plus" aria-hidden="true"> Google+</i>',
-        onClick: function() {
-          var myApp = new Framework7();
-     myApp.showPreloader('Success!,logged in with Google+.')
-    setTimeout(function () {
-        myApp.hidePreloader();
-    }, 2000);
-        }
-      },
-      {
       	title: 'Facebook',
         text: '<i class="fa fa-facebook-official" aria-hidden="true"> Facebook</i>',
         onClick: function() {
