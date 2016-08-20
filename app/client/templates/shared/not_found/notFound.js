@@ -86,7 +86,11 @@ var $$ = Dom7;
       	title: 'Google',
         text: '<i class="fa fa-google" aria-hidden="true"> Google</i>',
         onClick: function() {
-        Meteor.loginWithGoogle();
+          Meteor.loginWithGoogle();
+          if (Meteor.user()) {
+        } else {
+       document.location.reload(true);
+         }
         }
       },
       {
