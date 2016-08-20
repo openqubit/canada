@@ -13,11 +13,7 @@ if (Meteor.isClient) {
 
 Template.NotFound.events({
 'click #logout': function(){
-  var myApp = new Framework7();
-     myApp.showPreloader('Logout Successful')
-    setTimeout(function () {
-        myApp.hidePreloader();
-    }, 2000);
+  Meteor.logout();
     document.location.reload(true);
 }	
 });
@@ -90,11 +86,7 @@ var $$ = Dom7;
       	title: 'Google',
         text: '<i class="fa fa-google" aria-hidden="true"> Google</i>',
         onClick: function() {
-            var myApp = new Framework7();
-     myApp.showPreloader('Success!,logged in with Google.')
-    setTimeout(function () {
-        myApp.hidePreloader();
-    }, 2000);
+        Meteor.loginWithGoogle();
         }
       },
       {
@@ -108,11 +100,7 @@ var $$ = Dom7;
       	title: 'Twitter',
         text: '<i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i>',
         onClick: function() {
-          var myApp = new Framework7();
-     myApp.showPreloader('Success!,logged in with Twitter.')
-    setTimeout(function () {
-        myApp.hidePreloader();
-    }, 2000);
+         Meteor.loginWithTwitter();
         }
       }
     ]
