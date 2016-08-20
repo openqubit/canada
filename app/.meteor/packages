@@ -31,3 +31,8 @@ accounts-password
 mdg:geolocation
 dburles:google-maps
 service-configuration
+accounts-facebook
+hedcet:cordova-google-plus-native-sign-in
+accounts-google
+picsoung:accounts-uber
+accounts-ui
