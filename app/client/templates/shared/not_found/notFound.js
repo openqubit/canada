@@ -80,24 +80,28 @@ var $$ = Dom7;
     verticalButtons: true,
     buttons: [
       {
+      	title: 'Google',
         text: '<i class="fa fa-google" aria-hidden="true"> Google</i>',
         onClick: function() {
           myApp.alert('Success!,logged in with Google.')
         }
       },
       {
+      	title: 'Google+',
         text: '<i class="fa fa-google-plus" aria-hidden="true"> Google+</i>',
         onClick: function() {
           myApp.alert('Success!,logged in with Google+.')
         }
       },
       {
+      	title: 'Facebook',
         text: '<i class="fa fa-facebook-official" aria-hidden="true"> Facebook</i>',
         onClick: function() {
           myApp.alert('Success!,logged in with Facebook.')
         }
       },
       {
+      	title: 'Twitter',
         text: '<i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i>',
         onClick: function() {
           myApp.alert('Success!,logged in with Twitter.')
