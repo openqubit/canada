@@ -12,7 +12,9 @@ if (Meteor.isClient) {
 }
 
 Template.NotFound.events({
-	
+'click #logout': function(){
+    console.log("You have been logged out!");
+}	
 });
 
 /*****************************************************************************/
