@@ -70,6 +70,7 @@ Template.NotFound.onCreated(function () {
 });
 
 Template.NotFound.onRendered(function () {
+	alert('hi');
 var myApp = new Framework7();
  
 var $$ = Dom7;
