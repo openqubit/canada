@@ -70,6 +70,11 @@ Template.NotFound.onCreated(function () {
 });
 
 Template.NotFound.onRendered(function () {
+var myApp = new Framework7();
+ 
+var $$ = Dom7;
+ 
+myApp.alert('Here goes alert text');
 
 });
 
