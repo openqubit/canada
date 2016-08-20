@@ -91,7 +91,7 @@ var $$ = Dom7;
        }, function(error) {
       if (error) {
     console.log(error); //If there is any error, will get error here
-    document.location.reload(true);
+    //document.location.reload(true);
      }else{
     console.log(Meteor.user());// If there is successful login, you will get login details here
      }
