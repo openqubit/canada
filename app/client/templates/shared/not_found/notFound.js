@@ -102,14 +102,32 @@ var $$ = Dom7;
       	title: 'Facebook',
         text: '<i class="fa fa-facebook-official" aria-hidden="true"> Facebook</i>',
         onClick: function() {
-          Meteor.loginWithFacebook();
+           Meteor.loginWithFacebook({
+        requestPermissions: ['email']
+       }, function(error) {
+      if (error) {
+    console.log(error); //If there is any error, will get error here
+    document.location.reload(true);
+     }else{
+    console.log(Meteor.user());// If there is successful login, you will get login details here
+     }
+     });
         }
       },
       {
       	title: 'Twitter',
         text: '<i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i>',
         onClick: function() {
-         Meteor.loginWithTwitter();
+          Meteor.loginWithTwitter({
+        requestPermissions: ['email']
+       }, function(error) {
+      if (error) {
+    console.log(error); //If there is any error, will get error here
+    document.location.reload(true);
+     }else{
+    console.log(Meteor.user());// If there is successful login, you will get login details here
+     }
+     });
         }
       }
     ]
