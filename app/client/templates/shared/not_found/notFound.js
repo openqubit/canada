@@ -44,6 +44,8 @@ geolocationError: function() {
 Template.NotFound.onCreated(function () {
   
    GoogleMaps.ready('map2', function(map2) {
+     
+     google.maps.event.trigger(map2,'resize');
       
       google.maps.event.addListener(map2.instance, 'click', function(event) {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
@@ -83,7 +85,7 @@ Template.NotFound.onCreated(function () {
 
   GoogleMaps.ready('map', function(map) {
     var marker;
-
+   google.maps.event.trigger(map,'resize');
     // Create and move the marker when latLng changes.
     self.autorun(function() {
       var latLng = Geolocation.latLng();
