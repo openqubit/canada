@@ -48,12 +48,12 @@ Template.NotFound.onCreated(function () {
      google.maps.event.trigger(map2,'resize');
       
       google.maps.event.addListener(map2.instance, 'click', function(event) {
-        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+        Merkel.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
     
       var markers = {};
 
-      Markers.find().observe({
+      Merkel.find().observe({
         added: function (document) {
           var marker = new google.maps.Marker({
             draggable: true,
@@ -64,7 +64,7 @@ Template.NotFound.onCreated(function () {
           });
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
-            Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
+            Merkel.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
 
           markers[document._id] = marker;
