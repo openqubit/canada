@@ -51,11 +51,11 @@ geolocationError: function() {
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
   
-   GoogleMaps.ready('map2', function(map2) {
+   GoogleMaps.ready('map2', function(map) {
      
-     google.maps.event.trigger(map2,'resize');
+     google.maps.event.trigger(map,'resize');
       
-      google.maps.event.addListener(map2.instance, 'click', function(event) {
+      google.maps.event.addListener(map.instance, 'click', function(event) {
         Merkel.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
     
@@ -67,7 +67,7 @@ Template.NotFound.onCreated(function () {
             draggable: true,
             animation: google.maps.Animation.DROP,
             position: new google.maps.LatLng(document.lat, document.lng),
-            map: map2.instance,
+            map: map.instance,
             id: document._id
           });
 
