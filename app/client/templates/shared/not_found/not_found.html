@@ -211,11 +211,7 @@
                 <div class="">
                {{> map}}
                 </div>
-                <template name="map">
-  <div class="map-container">
-    {{> googleMap name="map" options=mapOptions}}
-  </div>
-</template>
+                
              </nav> 
             </div>
           </div>
@@ -1318,4 +1314,10 @@
       </div>
     </div>
 
+</template>
+
+<template name="map">
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+  </div>
 </template>
