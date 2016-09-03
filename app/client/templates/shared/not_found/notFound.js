@@ -51,21 +51,11 @@ geolocationError: function() {
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
 
-
-  GoogleMaps.ready('map', function(map) {
-    
     GoogleMaps.ready('map', function(map) {
-      
-    $(window).resize(function() {
-        google.maps.event.trigger(map, 'resize');
-    });
-    google.maps.event.trigger(map, 'resize');
-    
-      
       google.maps.event.addListener(map.instance, 'click', function(event) {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
-    
+
       var markers = {};
 
       Markers.find().observe({
@@ -94,8 +84,6 @@ Template.NotFound.onCreated(function () {
         }
       });
     });
-	
-});
 });
 Template.NotFound.onRendered(function () {
 var myApp = new Framework7();
