@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
 SSLProxy({
-       port: 4242, //or 443 (normal port/requires sudo)
+       port: 9443, //or 443 (normal port/requires sudo)
        ssl : {
             key: Assets.getText("mrt.key"),
             cert: Assets.getText("mrt.crt"),
