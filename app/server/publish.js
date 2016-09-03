@@ -6,6 +6,10 @@ Meteor.publish('merkel', function () {
   return Merkel.find();
 });
 
+Meteor.publish('markers', function () {
+  return Markers.find();
+});
+
 Meteor.publish('ft', function () {
   return Ft.find();
 });
