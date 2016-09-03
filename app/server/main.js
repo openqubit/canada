@@ -2,16 +2,6 @@ import { Meteor } from 'meteor/meteor';
 
 
 Meteor.startup(() => {
-SSLProxy({
-       port: 9443, //or 443 (normal port/requires sudo)
-       ssl : {
-            key: Assets.getText("mrt.key"),
-            cert: Assets.getText("mrt.crt"),
-
-            //Optional CA
-            //Assets.getText("ca.pem")
-       }
-    });
   // code to run on server at startup
   // first, remove configuration entry in case service is already configured
 Accounts.loginServiceConfiguration.remove({
