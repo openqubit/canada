@@ -1,7 +1,15 @@
 /*****************************************************************************/
 /* Home: Event Handlers */
 /*****************************************************************************/
-
+if (Meteor.isClient) {
+  Meteor.startup(function() {
+    console.log('hello');
+     GoogleMaps.load({
+    key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
+  });
+  });
+}
+  
 Template.NotFound.events({
 'click #logout': function(){
   Meteor.logout();
@@ -67,9 +75,6 @@ Template.NotFound.onCreated(function () {
     });
 });
 Template.NotFound.onRendered(function () {
-    GoogleMaps.load({
-    key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
-  });
   
 var myApp = new Framework7();
  
