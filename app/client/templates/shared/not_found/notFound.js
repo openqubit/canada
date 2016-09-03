@@ -42,6 +42,8 @@ Template.NotFound.onCreated(function () {
 
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
+        console.log("Latitude", event.latLng.lat());
+        console.log("Longitude",event.latLng.lng());
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
