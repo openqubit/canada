@@ -40,7 +40,10 @@ geolocationError: function() {
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
 
-    GoogleMaps.ready('map', function(map) {
+    
+});
+Template.NotFound.onRendered(function () {
+  GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
         console.log("Latitude", event.latLng.lat());
         console.log("Longitude",event.latLng.lng());
@@ -75,8 +78,6 @@ Template.NotFound.onCreated(function () {
         }
       });
     });
-});
-Template.NotFound.onRendered(function () {
  /** 
 var myApp = new Framework7();
  
