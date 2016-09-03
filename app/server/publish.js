@@ -6,6 +6,10 @@ Meteor.publish('paradise', function () {
   return Amish.find();
 });
 
+Meteor.publish('amish', function () {
+  return Amish.find();
+});
+
 Meteor.publish('markers', function () {
   return Markers.find();
 });
