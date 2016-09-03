@@ -44,7 +44,7 @@ GoogleMaps.ready('NotFound', function(map) {
       google.maps.event.addListener(the_map, 'click', function(event) {
         console.log("Latitude", event.latLng.lat());
         console.log("Longitude",event.latLng.lng());
-        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+        Amish.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
       var markers = {};
@@ -60,7 +60,7 @@ GoogleMaps.ready('NotFound', function(map) {
           });
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
-            Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
+            Amish.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
 
           markers[document._id] = marker;
