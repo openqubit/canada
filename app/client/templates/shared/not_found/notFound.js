@@ -39,7 +39,7 @@ geolocationError: function() {
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
-GoogleMaps.ready('map', function(map) {
+GoogleMaps.ready('NotFound', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
         console.log("Latitude", event.latLng.lat());
         console.log("Longitude",event.latLng.lng());
