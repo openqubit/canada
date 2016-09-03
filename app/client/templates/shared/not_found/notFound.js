@@ -27,13 +27,6 @@ geolocationError: function() {
     }
 });
 
-
-  
-   Meteor.startup(function() {
-  GoogleMaps.load({
-    key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
-  });
-  });
 /*****************************************************************************/
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
@@ -74,6 +67,10 @@ Template.NotFound.onCreated(function () {
     });
 });
 Template.NotFound.onRendered(function () {
+    GoogleMaps.load({
+    key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
+  });
+  
 var myApp = new Framework7();
  
 var $$ = Dom7;
