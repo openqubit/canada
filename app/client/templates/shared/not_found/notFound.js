@@ -49,7 +49,7 @@ GoogleMaps.ready('NotFound', function(map) {
 
       var markers = {};
 
-      Markers.find().observe({
+      Amish.find().observe({
         added: function (document) {
           var marker = new google.maps.Marker({
             draggable: true,
