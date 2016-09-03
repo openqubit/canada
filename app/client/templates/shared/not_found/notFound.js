@@ -3,14 +3,17 @@
 /*****************************************************************************/
 if (Meteor.isClient) {
   Meteor.startup(function() {
-    Meteor.subscribe('Amish');
-    Meteor.publish('Amish');
     console.log('hello');
     GoogleMaps.load({
     key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
     });
   });
 }
+
+Tracker.autorun(function() {
+Meteor.subscribe('Amish');
+//Meteor.publish('Amish');
+});
   
 Template.NotFound.events({
 'click #logout': function(){
