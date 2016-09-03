@@ -76,7 +76,7 @@ GoogleMaps.ready('map', function(map) {
     });
 });
 Template.NotFound.onRendered(function () {
-
+/**
 var myApp = new Framework7();
  
 var $$ = Dom7;
@@ -136,7 +136,7 @@ var $$ = Dom7;
       }
     ]
   })
-
+*/
 });
 
 Template.NotFound.onDestroyed(function () {
