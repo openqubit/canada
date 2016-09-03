@@ -10,10 +10,6 @@ if (Meteor.isClient) {
   });
 }
 
-Tracker.autorun(function() {
-Meteor.subscribe('Amish');
-//Meteor.publish('Amish');
-});
   
 Template.NotFound.events({
 'click #logout': function(){
@@ -45,6 +41,7 @@ geolocationError: function() {
 /*****************************************************************************/
 Template.NotFound.onCreated(function () {
 GoogleMaps.ready('NotFound', function(map) {
+  Meteor.subscribe('Amish');
       var the_map = map.instance;
       google.maps.event.addListener(the_map, 'click', function(event) {
         console.log("Latitude", event.latLng.lat());
