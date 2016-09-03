@@ -4,7 +4,7 @@ Uploads = new FS.Collection('uploads',{
   stores: [new FS.Store.FileSystem('uploads',{path:'~/projectUploads'})]
 });
 
-Merkel = new Mongo.Collection('merkel');
+Markers = new Mongo.Collection('markers');
 Pp = new Mongo.Collection('pp');
 Ft = new Mongo.Collection('ft');
 Af = new Mongo.Collection('af');
