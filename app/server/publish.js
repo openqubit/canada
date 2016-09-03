@@ -2,8 +2,8 @@
     return Meteor.users.find({_id: this.userId}, {fields: {_id: 1, profile: 1, login: 1, email: 1}});
   });
 
-Meteor.publish('merkel', function () {
-  return Merkel.find();
+Meteor.publish('paradise', function () {
+  return Amish.find();
 });
 
 Meteor.publish('markers', function () {
