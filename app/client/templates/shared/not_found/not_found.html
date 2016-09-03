@@ -181,12 +181,8 @@
             <br/><br/>
             <div class="page-content">
               <nav class="dashboard-menu">
-                <div id="map" class="map-container">
-                {{#unless geolocationError}}
-      {{> googleMap name="map" options=mapOptions}}
-    {{else}}
-      Geolocation failed: {{geolocationError}}
-    {{/unless}}
+                <div id="homemap" class="map-container">
+                Map rendered
                 </div>
                     </nav> 
             </div>
@@ -212,8 +208,8 @@
           <div data-page="index-2" class="page">
              <div class="page-content">
               <nav class="dashboard-menu">
-                <div id="map2" class="map-container">
-               {{>googleMap name="map2" options=map2Options}}
+                <div id="map" class="map-container">
+               
                 </div>
                     </nav> 
             </div>
