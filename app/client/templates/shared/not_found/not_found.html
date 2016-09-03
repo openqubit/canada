@@ -210,7 +210,13 @@
           <div data-page="index-2" class="page">
              <div class="page-content">
               <nav class="dashboard-menu">
-                  {{> yield "map"}}
+                  <div class="map-container">
+    {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+  </div>
              </nav> 
             </div>
           </div>
@@ -1313,10 +1319,4 @@
       </div>
     </div>
 
-</template>
-
-<template name="map">
-  <div class="map-container">
-    {{> googleMap name="map" options=mapOptions}}
-  </div>
 </template>
