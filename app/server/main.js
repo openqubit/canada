@@ -2,10 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 
 Meteor.startup(() => {
-  var MAP_ZOOM = 15;
-  GoogleMaps.load({
-    key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
-  });
+
   // code to run on server at startup
   // first, remove configuration entry in case service is already configured
 Accounts.loginServiceConfiguration.remove({
