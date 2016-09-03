@@ -208,9 +208,10 @@
           <div data-page="index-2" class="page">
              <div class="page-content">
               <nav class="dashboard-menu">
+                  {{> map}}
                 <div class="">
   <div class="map-container">
-    {{> googleMap options=mapOptions}}
+    {{> googleMap name="map" options=mapOptions}}
   </div>
                 </div>
                 
