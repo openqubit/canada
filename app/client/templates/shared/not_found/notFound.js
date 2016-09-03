@@ -4,9 +4,11 @@
 if (Meteor.isClient) {
   Meteor.startup(function() {
     console.log('hello');
+    /**
      GoogleMaps.load({
     key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
-  });
+    });
+    */
   });
 }
   
