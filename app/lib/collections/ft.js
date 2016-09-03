@@ -662,20 +662,7 @@ if (Meteor.isServer) {
       return false;
     }
   });
-  
-    Amish.allow({
-    insert: function (userId, doc) {
-      return false;
-    },
 
-    update: function (userId, doc, fieldNames, modifier) {
-      return false;
-    },
-
-    remove: function (userId, doc) {
-      return false;
-    }
-  });
 
   Fruits.allow({
     insert: function (userId, doc) {
