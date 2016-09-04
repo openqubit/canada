@@ -1,8 +1,9 @@
 
   Template.map.onCreated(function() {
+    console.log('created!');
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
-        console.log('created!');
+        
         Crowe.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
