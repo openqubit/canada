@@ -3,6 +3,7 @@ if (Meteor.isClient) {
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
+        alert('iframe bridge connected onBefore() insert!');
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
