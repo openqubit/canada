@@ -1,18 +1,15 @@
-  Template.map.onRendered(function () {
-  });
+Markers = new Mongo.Collection('markers');
 
+if (Meteor.isClient) {
   Template.map.onCreated(function() {
-
     GoogleMaps.ready('map', function(map) {
-      
       google.maps.event.addListener(map.instance, 'click', function(event) {
-        console.log(event.latLng.lat());
-        Crowe.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
       var markers = {};
 
-      Crowe.find().observe({
+      Markers.find().observe({
         added: function (document) {
           var marker = new google.maps.Marker({
             draggable: true,
@@ -23,7 +20,7 @@
           });
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
-            Crowe.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
+            Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
 
           markers[document._id] = marker;
@@ -40,7 +37,7 @@
     });
   });
 
- if (Meteor.isClient) {
+if (Meteor.isClient) {
   Meteor.startup(function() {
     console.log('hello');
     GoogleMaps.load({
@@ -59,4 +56,5 @@
       }
     }
   });
+}
 
