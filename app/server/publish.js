@@ -2,17 +2,11 @@
     return Meteor.users.find({_id: this.userId}, {fields: {_id: 1, profile: 1, login: 1, email: 1}});
   });
 
-Meteor.publish('paradise', function () {
-  return Amish.find();
-});
 
 Meteor.publish('crowe', function () {
   return Crowe.find();
 });
 
-Meteor.publish('here', function () {
-  return Here.find();
-});
 
 Meteor.publish('ft', function () {
   return Ft.find();
