@@ -3,6 +3,7 @@ if (Meteor.isClient) {
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
+        console.log(event.latLng.lat());
         Crowe.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
