@@ -6,7 +6,7 @@ FtController = RouteController.extend({
   // this.subscribe('item', this.params._id).wait();
   
   subscriptions: function() {
-    this.subscribe('paradise');
+    this.subscribe('here');
     this.subscribe('users');
     this.subscribe('amish');
     this.subscribe('af');
