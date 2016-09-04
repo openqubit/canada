@@ -1,5 +1,4 @@
 
-if (Meteor.isClient) {
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
@@ -56,4 +55,4 @@ if (Meteor.isClient) {
       }
     }
   });
-}
+
