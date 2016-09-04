@@ -709,7 +709,7 @@ Crowe.allow({
 
 }
 if (Meteor.isClient) {
-  Crowe.allow({
+  Markers.allow({
     insert: function (userId, doc) {
       return false;
     },
