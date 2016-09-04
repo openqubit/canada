@@ -5,8 +5,6 @@ Uploads = new FS.Collection('uploads',{
 });
 
 Crowe = new Mongo.Collection('crowe');
-Here = new Mongo.Collection('here');
-Amish = new Mongo.Collection('paradise');
 Pp = new Mongo.Collection('pp');
 Ft = new Mongo.Collection('ft');
 Af = new Mongo.Collection('af');
