@@ -650,15 +650,15 @@ if (Meteor.isServer) {
 
 Markers.allow({
     insert: function (userId, doc) {
-      return false;
+      return true;
     },
 
     update: function (userId, doc, fieldNames, modifier) {
-      return false;
+      return true;
     },
 
     remove: function (userId, doc) {
-      return false;
+      return true;
     }
   });
   
@@ -712,15 +712,15 @@ Markers.allow({
 if (Meteor.isClient) {
   Markers.allow({
     insert: function (userId, doc) {
-      return false;
+      return true;
     },
 
     update: function (userId, doc, fieldNames, modifier) {
-      return false;
+      return true;
     },
 
     remove: function (userId, doc) {
-      return false;
+      return true;
     }
   });
 }
