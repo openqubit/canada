@@ -26,7 +26,7 @@ FtController = RouteController.extend({
   // this option and the subscriptions option above.
   // return Meteor.subscribe('post', this.params._id);
    github: function() {
-   this.render('Map');
+   this.render('map');
   },
 
    tinder: function() {
