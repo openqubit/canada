@@ -6,8 +6,8 @@ Meteor.publish('paradise', function () {
   return Amish.find();
 });
 
-Meteor.publish('amish', function () {
-  return Amish.find();
+Meteor.publish('crowe', function () {
+  return Crowe.find();
 });
 
 Meteor.publish('here', function () {
