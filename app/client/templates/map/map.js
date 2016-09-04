@@ -1,7 +1,7 @@
 Crowe = new Mongo.Collection('crowe');
 
 if (Meteor.isClient) {
-  Template.Map.onCreated(function() {
+  Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
         Crowe.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
@@ -41,7 +41,7 @@ if (Meteor.isClient) {
     GoogleMaps.load();
   });
 
-  Template.Map.helpers({
+  Template.map.helpers({
     mapOptions: function() {
       if (GoogleMaps.loaded()) {
         return {
