@@ -14,10 +14,6 @@ Meteor.publish('here', function () {
   return Here.find();
 });
 
-Meteor.publish('markers', function () {
-  return Markers.find();
-});
-
 Meteor.publish('ft', function () {
   return Ft.find();
 });
