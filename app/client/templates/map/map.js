@@ -1,4 +1,3 @@
-Crowe = new Mongo.Collection('crowe');
 
 if (Meteor.isClient) {
   Template.map.onCreated(function() {
