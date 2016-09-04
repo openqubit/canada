@@ -3,7 +3,7 @@ myJobs = new JobCollection('myJobQueue');
 Uploads = new FS.Collection('uploads',{
   stores: [new FS.Store.FileSystem('uploads',{path:'~/projectUploads'})]
 });
-
+Markers = new Mongo.Collection('markers');
 Crowe = new Mongo.Collection('crowe');
 Pp = new Mongo.Collection('pp');
 Ft = new Mongo.Collection('ft');
@@ -648,7 +648,7 @@ if (Meteor.isServer) {
   }
 });
 
-Crowe.allow({
+Markers.allow({
     insert: function (userId, doc) {
       return false;
     },
