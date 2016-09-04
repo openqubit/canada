@@ -7,7 +7,7 @@ FtController = RouteController.extend({
   
   subscriptions: function() {
     this.subscribe('users');
-    this.subscribe('crowe');
+    this.subscribe('markers');
     this.subscribe('af');
     this.subscribe('fruits');
     this.subscribe('pc');
