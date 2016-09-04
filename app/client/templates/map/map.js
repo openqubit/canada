@@ -1,6 +1,6 @@
 
 if (Meteor.isClient) {
-  Template.map.onCreated(function() {
+  Template.Map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
         console.log(event.latLng.lat());
@@ -46,7 +46,7 @@ if (Meteor.isClient) {
   });
 }
 
-  Template.map.helpers({
+  Template.Map.helpers({
     mapOptions: function() {
       if (GoogleMaps.loaded()) {
         return {
