@@ -3,8 +3,8 @@
   });
 
 
-Meteor.publish('crowe', function () {
-  return Crowe.find();
+Meteor.publish('markers', function () {
+  return Markers.find();
 });
 
 
