@@ -4,6 +4,7 @@
   Template.map.onCreated(function() {
 
     GoogleMaps.ready('map', function(map) {
+      console.log('inside google');
       google.maps.event.addListener(map.instance, 'click', function(event) {
         
         Crowe.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
