@@ -4,6 +4,7 @@ Uploads = new FS.Collection('uploads',{
   stores: [new FS.Store.FileSystem('uploads',{path:'~/projectUploads'})]
 });
 
+Here = new Mongo.Collection('here');
 Markers = new Mongo.Collection('markers');
 Amish = new Mongo.Collection('paradise');
 Pp = new Mongo.Collection('pp');
