@@ -1,15 +1,15 @@
-Markers = new Mongo.Collection('markers');
+Crowe = new Mongo.Collection('crowe');
 
 if (Meteor.isClient) {
   Template.Map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
-        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+        Crowe.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
       var markers = {};
 
-      Markers.find().observe({
+      Crowe.find().observe({
         added: function (document) {
           var marker = new google.maps.Marker({
             draggable: true,
@@ -20,7 +20,7 @@ if (Meteor.isClient) {
           });
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
-            Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
+            Crowe.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
 
           markers[document._id] = marker;
