@@ -1,15 +1,15 @@
-Horde = new Mongo.Collection('horde');
+Markers = new Mongo.Collection('markers');
 
 if (Meteor.isClient) {
   Template.Ft.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
-        Horde.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
       var markers = {};
 
-      Horde.find().observe({
+      Markers.find().observe({
         added: function (document) {
           var marker = new google.maps.Marker({
             draggable: true,
@@ -20,7 +20,7 @@ if (Meteor.isClient) {
           });
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
-            Horde.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
+            Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
 
           markers[document._id] = marker;
