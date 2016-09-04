@@ -1,5 +1,19 @@
 Markers = new Mongo.Collection('markers');
+if (Meteor.isClient) {
+  Markers.allow({
+    insert: function (userId, doc) {
+      return false;
+    },
 
+    update: function (userId, doc, fieldNames, modifier) {
+      return false;
+    },
+
+    remove: function (userId, doc) {
+      return false;
+    }
+  });
+}
 if (Meteor.isClient) {
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
