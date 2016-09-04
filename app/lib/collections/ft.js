@@ -5,7 +5,6 @@ Uploads = new FS.Collection('uploads',{
 });
 
 Here = new Mongo.Collection('here');
-Markers = new Mongo.Collection('markers');
 Amish = new Mongo.Collection('paradise');
 Pp = new Mongo.Collection('pp');
 Ft = new Mongo.Collection('ft');
