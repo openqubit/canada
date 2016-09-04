@@ -10,6 +10,10 @@ Meteor.publish('amish', function () {
   return Amish.find();
 });
 
+Meteor.publish('here', function () {
+  return Here.find();
+});
+
 Meteor.publish('markers', function () {
   return Markers.find();
 });
