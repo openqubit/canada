@@ -1,4 +1,3 @@
-Markers = new Mongo.Collection('markers');
 
 if (Meteor.isClient) {
   Template.Ft.onCreated(function() {
