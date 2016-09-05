@@ -57,16 +57,16 @@ if (Meteor.isClient) {
             Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
           
-         
+         var prev_infowindow =false; 
           var infoWindow = new google.maps.InfoWindow({
                 content: "Fancy html goes here"
             });
-           
-            if (infoWindow) {
-            infoWindow.close();
-             };
-        
+          
             google.maps.event.addListener(marker, 'click', function () {
+              if( prev_infowindow ) {
+           prev_infowindow.close();
+            }
+           prev_infowindow = infowindow;
                 infoWindow.open(map.instance, marker);
             });
             
