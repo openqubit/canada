@@ -56,9 +56,9 @@ if (Meteor.isClient) {
           google.maps.event.addListener(marker, 'dragend', function(event) {
             Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
-          
+          var dt = document.eventcategory;
           var infoWindow = new google.maps.InfoWindow({
-            var dt = document.eventcategory;
+            
             var kon = "This event was created on this category "+dt;
                 content: kon
             });
