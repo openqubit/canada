@@ -13,8 +13,21 @@ if (Meteor.isClient) {
  
         var $$ = Dom7;
         
-       myApp.confirm('<select><option>Birthday</option><option>Hackathon</option><option>Bar mitzvah</option></select><br/>'+
-       '<br/><br/><select><option>Mine</option><option>Others</option></select>', 'Geo Canada',
+       myApp.confirm('<div class="list-block">'+
+           '<ul>'+
+          '<li><a href="#" class="item-link smart-select">'+
+        '<select name="car" multiple maxlength="1">'+
+          '<optgroup label="Categories">'+
+            '<option value="honda">Hackathon</option>'+
+            '<option value="lexus">Bar Mitzvah</option>'+
+            '<option value="mazda">Birthday</option>'+
+          '</optgroup>'+
+        '</select>'+
+        '<div class="item-content">'+
+          '<div class="item-inner">'+
+            '<div class="item-title">Car</div>'+
+          '</div>'+
+        '</div></a></li></ul></div>', 'Geo Canada',
       function () {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       },
