@@ -25,7 +25,7 @@ if (Meteor.isClient) {
         '</select>'+
         '<div class="item-content">'+
           '<div class="item-inner">'+
-            '<div class="item-title">Car</div>'+
+            '<div class="item-title">Event Type</div>'+
           '</div>'+
         '</div></a></li></ul></div>', 'Geo Canada',
       function () {
