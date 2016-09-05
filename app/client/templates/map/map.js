@@ -58,7 +58,8 @@ if (Meteor.isClient) {
           });
           
           var infoWindow = new google.maps.InfoWindow({
-                content: toString(document.datecreated)
+            var kon = 'This was created on '+document.datecreated;
+                content: kon
             });
 
             google.maps.event.addListener(marker, 'click', function () {
