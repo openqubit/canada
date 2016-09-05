@@ -66,7 +66,7 @@ if (Meteor.isClient) {
               if( prev_infowindow ) {
            prev_infowindow.close();
             }
-           prev_infowindow = infowindow;
+           prev_infowindow = infoWindow;
                 infoWindow.open(map.instance, marker);
             });
             
