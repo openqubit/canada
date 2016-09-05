@@ -62,7 +62,6 @@ if (Meteor.isClient) {
             });
           
             google.maps.event.addListener(marker, 'click', function () {
-              infoWindow.close();
                 infoWindow.open(map.instance, marker);
             });
             
