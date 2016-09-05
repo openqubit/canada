@@ -4,7 +4,10 @@ if (Meteor.isClient) {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
         var ln = localStorage.getItem("lastname");
-        
+        var url = (window.location != window.parent.location)
+            ? document.referrer
+            : document.location;
+            alert(url);
          Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       });
 
