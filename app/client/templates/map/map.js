@@ -58,8 +58,7 @@ if (Meteor.isClient) {
           });
           
           var infoWindow = new google.maps.InfoWindow({
-            var kon = 'This is a an event. HTML goes here.';
-                content: kon
+                content: "Fancy html goes here"
             });
 
             google.maps.event.addListener(marker, 'click', function () {
