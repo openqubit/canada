@@ -42,6 +42,7 @@ if (Meteor.isClient) {
             animation: google.maps.Animation.DROP,
             position: new google.maps.LatLng(document.lat, document.lng),
             map: map.instance,
+            icon: 'http://maps.google.com/mapfiles/kml/shapes/hospitals.png',
             id: document._id
           });
 
