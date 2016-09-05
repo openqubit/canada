@@ -5,11 +5,7 @@ if (Meteor.isClient) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
         var ln = localStorage.getItem("lastname");
         
-        $(window).on('message', function(evt) {
-          var ex = evt.originalEvent.data;
-           Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng(), userid: ex });
-        });
-        
+         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       });
 
       var markers = {};
