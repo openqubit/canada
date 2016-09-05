@@ -62,9 +62,9 @@ if (Meteor.isClient) {
                 content: "Fancy html goes here"
             });
            
-            if (infowindow) {
-            infowindow.close();
-        };
+            if (infoWindow) {
+            infoWindow.close();
+             };
         
             google.maps.event.addListener(marker, 'click', function () {
                 infoWindow.open(map.instance, marker);
