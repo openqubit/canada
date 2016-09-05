@@ -3,7 +3,7 @@ if (Meteor.isClient) {
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
-        var ln = localStorage.getItem("lastname");
+        var ln = window.parent.localStorage.getItem("lastname");
         alert('iframe bridge connected onBefore() insert!'+ln);
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
