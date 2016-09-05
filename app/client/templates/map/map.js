@@ -7,10 +7,9 @@ if (Meteor.isClient) {
         
         $(window).on('message', function(evt) {
           var ex = evt.originalEvent.data;
-           alert(ex);
+           Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng(), userid: ex });
         });
         
-        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       });
 
       var markers = {};
