@@ -13,15 +13,15 @@ if (Meteor.isClient) {
  
         var $$ = Dom7;
         
-       myApp.confirm('<select>'+
-            '<option>Hackathon</option>'+
-              '<option>Birthday</option>'+
-              '<option>Bar Mitzvah</option>'+
+       myApp.confirm('<select name="category">'+
+            '<option value="hackathon">Hackathon</option>'+
+              '<option value="birthday">Birthday</option>'+
+              '<option value="bar">Bar Mitzvah</option>'+
             '</select>'+
-            '<br/><br/><select>'+
-            '<option>Me</option>'+
-              '<option>Other</option>'+
-            '</select>', 'Geo Canada',
+            '<br/><br/><select name="owner">'+
+            '<option value="3">Me</option>'+
+              '<option value="4">Other</option>'+
+            '</select>', 'Geo Canada Create Event',
       function () {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       },
