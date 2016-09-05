@@ -51,8 +51,6 @@ if (Meteor.isClient) {
             map: map.instance,
             id: document._id,
             icon: icon
-            }
-            
           });
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
