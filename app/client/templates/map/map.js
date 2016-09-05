@@ -13,12 +13,12 @@ if (Meteor.isClient) {
  
         var $$ = Dom7;
         
-       myApp.confirm('<select name="category">'+
+       myApp.confirm('<select id="eventcategory" name="category">'+
             '<option value="hackathon">Hackathon</option>'+
               '<option value="birthday">Birthday</option>'+
               '<option value="bar">Bar Mitzvah</option>'+
             '</select>'+
-            '<br/><br/><select name="owner">'+
+            '<br/><br/><select id="eventowner" name="owner">'+
             '<option value="3">Me</option>'+
               '<option value="4">Other</option>'+
             '</select>', 'Geo Canada Create Event',
@@ -26,6 +26,9 @@ if (Meteor.isClient) {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       },
       function () {
+        var ec = $('#eventcategory').val();
+        var eo = $('#eventowner').val();
+        alert(ec + eo);
       }
       );
       });
