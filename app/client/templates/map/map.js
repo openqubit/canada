@@ -23,12 +23,12 @@ if (Meteor.isClient) {
               '<option value="4">Other</option>'+
             '</select>', 'Geo Canada Create Event',
       function () {
-        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
+         var ec = $('#eventcategory').val();
+        var eo = $('#eventowner').val();
+        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng(), eventowner:eo, eventcategory: ec,datecreated: new Date()});
       },
       function () {
-        var ec = $('#eventcategory').val();
-        var eo = $('#eventowner').val();
-        alert(ec + eo);
+       
       }
       );
       });
