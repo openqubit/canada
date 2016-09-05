@@ -13,7 +13,8 @@ if (Meteor.isClient) {
  
         var $$ = Dom7;
         
-       myApp.confirm('<select><option>Birthday</option><option>Hackathon</option><option>Bar mitzvah</option></select>', 'Geo Canada',
+       myApp.confirm('<select><option>Birthday</option><option>Hackathon</option><option>Bar mitzvah</option></select><br/>'+
+       '<select><option>Mine</option><option>Others</option></select>', 'Geo Canada',
       function () {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       },
