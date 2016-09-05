@@ -37,20 +37,20 @@ if (Meteor.isClient) {
 
       Markers.find().observe({
         added: function (document) {
+          var icon;
+              if(document.eventowner == '3'){
+                var icon = 'http://maps.google.com/mapfiles/kml/shapes/hospitals.png';
+              }
+              else{
+                var icon = 'http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png';
+              }
           var marker = new google.maps.Marker({
             draggable: true,
             animation: google.maps.Animation.DROP,
             position: new google.maps.LatLng(document.lat, document.lng),
             map: map.instance,
             id: document._id,
-            icon: function(){
-              if(document.eventowner == '3'){
-                return 'http://maps.google.com/mapfiles/kml/shapes/hospitals.png';
-              }
-              else{
-                return 'http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png';
-              }
-              }
+            icon: icon
             }
             
           });
