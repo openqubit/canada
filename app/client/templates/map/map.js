@@ -13,7 +13,6 @@ if (Meteor.isClient) {
  
         var $$ = Dom7;
         
-        $$('.confirm-ok-cancel').on('click', function () {
        myApp.confirm('You are about to create an event.', 
       function () {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
@@ -22,7 +21,6 @@ if (Meteor.isClient) {
         myApp.alert('You clicked Cancel button');
       }
       );
-      });
       });
 
       var markers = {};
