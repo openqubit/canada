@@ -7,9 +7,8 @@ if (Meteor.isClient) {
         var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location;
-        var href = $(this).attr("href");
-        var lst = href.substr(href.lastIndexOf('/') + 1);
-        alert(lst);
+       var lastSegment = url.split('/').pop();
+        alert(lastSegment);
          Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       });
 
