@@ -8,8 +8,21 @@ if (Meteor.isClient) {
             ? document.referrer
             : document.location;
        var lastSegment = url.split('/').pop();
-        alert("the cors iframe bridge parameter is  "+lastSegment);
-         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
+        //alert("the cors iframe bridge parameter is  "+lastSegment);
+        var myApp = new Framework7();
+ 
+        var $$ = Dom7;
+        
+        $$('.confirm-ok-cancel').on('click', function () {
+       myApp.confirm('You are about to create an event.', 
+      function () {
+        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
+      },
+      function () {
+        myApp.alert('You clicked Cancel button');
+      }
+      );
+      });
       });
 
       var markers = {};
