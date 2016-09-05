@@ -56,7 +56,15 @@ if (Meteor.isClient) {
           google.maps.event.addListener(marker, 'dragend', function(event) {
             Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
           });
+          
+          var infoWindow = new google.maps.InfoWindow({
+                content: document.datecreated
+            });
 
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map.instance, marker);
+            });
+            
           markers[document._id] = marker;
         },
         changed: function (newDocument, oldDocument) {
