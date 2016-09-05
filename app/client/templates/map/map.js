@@ -18,7 +18,6 @@ if (Meteor.isClient) {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
       },
       function () {
-        myApp.alert('You clicked Cancel button');
       }
       );
       });
