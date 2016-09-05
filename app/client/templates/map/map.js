@@ -58,7 +58,7 @@ if (Meteor.isClient) {
           });
           
           var infoWindow = new google.maps.InfoWindow({
-            var kon = "This is a an event. HTML goes here.";
+            var kon = 'This is a an event. HTML goes here.';
                 content: kon
             });
 
