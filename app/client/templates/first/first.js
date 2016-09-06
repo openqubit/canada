@@ -5,8 +5,8 @@ if (Meteor.isClient) {
   Template.first.onCreated(function() {
     var self = this;
 
-    GoogleMaps.ready('first', function(map) {
-      var marker;
+    GoogleMaps.ready('first', function(firstmap) {
+      var firstmarker;
 
       // Create and move the marker when latLng changes.
       self.autorun(function() {
@@ -15,20 +15,20 @@ if (Meteor.isClient) {
           return;
 
         // If the marker doesn't yet exist, create it.
-        if (! marker) {
-          marker = new google.maps.Marker({
+        if (! firstmarker) {
+          firstmarker = new google.maps.Marker({
             position: new google.maps.LatLng(latLng.lat, latLng.lng),
-            map: map.instance
+            map: firstmap.instance
           });
         }
         // The marker already exists, so we'll just change its position.
         else {
-          marker.setPosition(latLng);
+          firstmarker.setPosition(latLng);
         }
 
         // Center and zoom the map view onto the current position.
-        map.instance.setCenter(marker.getPosition());
-        map.instance.setZoom(MAP_ZOOM);
+        firstmap.instance.setCenter(marker.getPosition());
+        firstmap.instance.setZoom(MAP_ZOOM);
       });
     });
   });
