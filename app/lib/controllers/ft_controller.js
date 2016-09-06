@@ -28,6 +28,10 @@ FtController = RouteController.extend({
    github: function() {
    this.render('map');
   },
+  
+  first: function() {
+   this.render('first');
+  },
 
    tinder: function() {
    this.render('Tinder');
