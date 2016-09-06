@@ -5,7 +5,7 @@ if (Meteor.isClient) {
   Template.first.onCreated(function() {
     var self = this;
 
-    GoogleMaps.ready('map', function(map) {
+    GoogleMaps.ready('first', function(map) {
       var marker;
 
       // Create and move the marker when latLng changes.
