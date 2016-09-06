@@ -2,6 +2,16 @@ import { Meteor } from 'meteor/meteor';
 
 
 Meteor.startup(() => {
+  SSLProxy({
+       port: 6000, //or 443 (normal port/requires sudo)
+       ssl : {
+            key: Assets.getText("apache.key"),
+            cert: Assets.getText("apache.crt"),
+
+            //Optional CA
+            //Assets.getText("ca.pem")
+       }
+    });
   // code to run on server at startup
   // first, remove configuration entry in case service is already configured
 Accounts.loginServiceConfiguration.remove({
