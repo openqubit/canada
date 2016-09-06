@@ -7,6 +7,7 @@ if (Meteor.isClient) {
         var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location;
+            var url = toString(url);
        var lastSegment = url.split('/').pop();
         //alert("the cors iframe bridge parameter is  "+lastSegment);
         var myApp = new Framework7();
