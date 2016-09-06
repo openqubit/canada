@@ -1,94 +1,52 @@
-
 if (Meteor.isClient) {
+  var MAP_ZOOM = 15;
+
+
   Template.first.onCreated(function() {
+    var self = this;
+
     GoogleMaps.ready('map', function(map) {
-      google.maps.event.addListener(map.instance, 'click', function(event) {
-        var ln = localStorage.getItem("lastname");
-        var url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location;
-       var lastSegment = url.split('/').pop();
-        //alert("the cors iframe bridge parameter is  "+lastSegment);
-        var myApp = new Framework7();
- 
-        var $$ = Dom7;
-        
-       myApp.confirm('<select id="eventcategory" name="category">'+
-            '<option value="hackathon">Hackathon</option>'+
-              '<option value="birthday">Birthday</option>'+
-              '<option value="bar">Bar Mitzvah</option>'+
-            '</select>'+
-            '<br/><br/><select id="eventowner" name="owner">'+
-            '<option value="3">Me</option>'+
-              '<option value="4">Other</option>'+
-            '</select>', 'Geo Canada Create Event',
-      function () {
-         var ec = $('#eventcategory').val();
-        var eo = $('#eventowner').val();
-        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng(), eventowner:eo, eventcategory: ec,datecreated: new Date()});
-      },
-      function () {
-       
-      }
-      );
-      });
+      var marker;
 
-      var markers = {};
+      // Create and move the marker when latLng changes.
+      self.autorun(function() {
+        var latLng = Geolocation.latLng();
+        if (! latLng)
+          return;
 
-      Markers.find().observe({
-        added: function (document) {
-          var icon;
-              if(document.eventowner == '3'){
-                var icon = 'http://maps.google.com/mapfiles/kml/shapes/hospitals.png';
-              }
-              else{
-                var icon = 'http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png';
-              }
-          var marker = new google.maps.Marker({
-            draggable: true,
-            animation: google.maps.Animation.DROP,
-            position: new google.maps.LatLng(document.lat, document.lng),
-            map: map.instance,
-            id: document._id,
-            icon: icon
+        // If the marker doesn't yet exist, create it.
+        if (! marker) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(latLng.lat, latLng.lng),
+            map: map.instance
           });
-
-          google.maps.event.addListener(marker, 'dragend', function(event) {
-            Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
-          });
-          
-          var infoWindow = new google.maps.InfoWindow({
-                content: "Fancy html goes here"
-            });
-          
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map.instance, marker);
-            });
-            
-          markers[document._id] = marker;
-        },
-        changed: function (newDocument, oldDocument) {
-          markers[newDocument._id].setPosition({ lat: newDocument.lat, lng: newDocument.lng });
-        },
-        removed: function (oldDocument) {
-          markers[oldDocument._id].setMap(null);
-          google.maps.event.clearInstanceListeners(markers[oldDocument._id]);
-          delete markers[oldDocument._id];
         }
+        // The marker already exists, so we'll just change its position.
+        else {
+          marker.setPosition(latLng);
+        }
+
+        // Center and zoom the map view onto the current position.
+        map.instance.setCenter(marker.getPosition());
+        map.instance.setZoom(MAP_ZOOM);
       });
     });
   });
 
-
   Template.first.helpers({
+    geolocationError: function() {
+      var error = Geolocation.error();
+      return error && error.message;
+    },
     mapOptions: function() {
-      if (GoogleMaps.loaded()) {
+      var latLng = Geolocation.latLng();
+      // Initialize the map once we have the latLng.
+      if (GoogleMaps.loaded() && latLng) {
         return {
-          center: new google.maps.LatLng(-37.8136, 144.9631),
-          zoom: 8
+          center: new google.maps.LatLng(latLng.lat, latLng.lng),
+          zoom: MAP_ZOOM
         };
       }
     }
   });
 }
-
