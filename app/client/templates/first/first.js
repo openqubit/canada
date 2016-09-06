@@ -18,7 +18,7 @@ if (Meteor.isClient) {
         if (! firstmarker) {
           firstmarker = new google.maps.Marker({
             position: new google.maps.LatLng(latLng.lat, latLng.lng),
-            map: firstmap.instance2
+            map: firstmap.instance
           });
         }
         // The marker already exists, so we'll just change its position.
@@ -27,8 +27,8 @@ if (Meteor.isClient) {
         }
 
         // Center and zoom the map view onto the current position.
-        firstmap.instance2.setCenter(firstmarker.getPosition());
-        firstmap.instance2.setZoom(MAP_ZOOM);
+        firstmap.instance.setCenter(firstmarker.getPosition());
+        firstmap.instance.setZoom(MAP_ZOOM);
       });
     });
   });
