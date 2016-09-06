@@ -10,6 +10,12 @@ Router.configure({
 //   action: 'github',
 //   where: 'client'
 // });
+Router.route('/Ft/first', {
+  name: 'first',
+  controller: 'FtController',
+  action: 'first',
+  where: 'client'
+});
 
 Router.route('/Ft/github', {
   name: 'github',
