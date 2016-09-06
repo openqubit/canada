@@ -10,7 +10,7 @@
 <template name="first">
   <div class="map-container">
     {{#unless geolocationError}}
-      {{> googleMap name="first" options=mapOptions}}
+      {{> googleMap name="first" options=firstOptions}}
     {{else}}
       Geolocation failed: {{geolocationError}}
     {{/unless}}
