@@ -38,7 +38,7 @@ if (Meteor.isClient) {
       var error = Geolocation.error();
       return error && error.message;
     },
-    mapOptions: function() {
+    firstOptions: function() {
       var latLng = Geolocation.latLng();
       // Initialize the map once we have the latLng.
       if (GoogleMaps.loaded() && latLng) {
