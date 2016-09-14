@@ -110,8 +110,3 @@ if (Meteor.isClient) {
   });
 }
 
-if (Meteor.isServer) {
-  Meteor.startup(function() {
-    Markers._ensureIndex({createdAt: 1, expireAfterSeconds: 60});
-  });
-}
