@@ -35,7 +35,7 @@ if (Meteor.isClient) {
       function () {
          var ec = $('#eventcategory').val();
         var eo = $('#eventowner').val();
-        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng(), eventowner:eo, eventcategory: ec,datecreated: new Date()});
+        Markers.insert({ createdAt: new Date(),lat: event.latLng.lat(), lng: event.latLng.lng(), eventowner:eo, eventcategory: ec});
       },
       function () {
        
@@ -92,6 +92,7 @@ if (Meteor.isClient) {
 if (Meteor.isClient) {
   Meteor.startup(function() {
     console.log('hello');
+    Markers._ensureIndex({createdAt: 1, expireAfterSeconds: 60});
     GoogleMaps.load({
     key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
     });
