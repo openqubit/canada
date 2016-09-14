@@ -92,7 +92,6 @@ if (Meteor.isClient) {
 if (Meteor.isClient) {
   Meteor.startup(function() {
     console.log('hello');
-    Markers._ensureIndex({createdAt: 1, expireAfterSeconds: 60});
     GoogleMaps.load({
     key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
     });
@@ -111,3 +110,8 @@ if (Meteor.isClient) {
   });
 }
 
+if (Meteor.isServer) {
+  Meteor.startup(function() {
+    Markers._ensureIndex({createdAt: 1, expireAfterSeconds: 60});
+  });
+}
