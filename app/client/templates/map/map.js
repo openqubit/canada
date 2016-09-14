@@ -28,7 +28,7 @@ if (Meteor.isClient) {
               '<option value="bar">Bar Mitzvah</option>'+
             '</select><br/><br/>'+
             '<label>Event Owner</label><br/><br/>'+
-            '<br/><br/><select id="eventowner" name="owner">'+
+            '<select id="eventowner" name="owner">'+
             '<option value="3">Me</option>'+
               '<option value="4">Other</option>'+
             '</select>', 'Geo Canada Create Event',
