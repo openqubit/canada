@@ -26,7 +26,7 @@ if (Meteor.isClient) {
             '<option value="hackathon">Hackathon</option>'+
               '<option value="birthday">Birthday</option>'+
               '<option value="bar">Bar Mitzvah</option>'+
-            '</select>'+
+            '</select><br/><br/>'+
             '<label>Event Owner</label><br/><br/>'+
             '<br/><br/><select id="eventowner" name="owner">'+
             '<option value="3">Me</option>'+
