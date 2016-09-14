@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 
 Meteor.startup(() => {
-Markers._ensureIndex({createdAt: 1, expireAfterSeconds: 60});
+Markers._ensureIndex({createdAt: 1}, {expireAfterSeconds: 60});
   // SSLProxy({
   //     port: 6000, //or 443 (normal port/requires sudo)
   //     ssl : {
