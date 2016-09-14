@@ -14,7 +14,8 @@ if (Meteor.isClient) {
  
         var $$ = Dom7;
         
-       myApp.confirm('<select id="eventcategory" name="category">'+
+       myApp.confirm('<input type="text" id="eventtile" value="" /> <br/><br/>'+
+        '<select id="eventcategory" name="category">'+
             '<option value="hackathon">Hackathon</option>'+
               '<option value="birthday">Birthday</option>'+
               '<option value="bar">Bar Mitzvah</option>'+
