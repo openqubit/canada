@@ -15,14 +15,19 @@ if (Meteor.isClient) {
         var $$ = Dom7;
         
        myApp.confirm(
+      '<label>Event Title</label><br/><br/>'+
+       '<input type="text" id="eventtitle" value="" /> <br/><br/>'+
       '<label>Event Time</label><br/><br/>'+
        '<input type="time" id="eventtime" value="" /> <br/><br/>'+
+       '<label>Event Duration</label><br/><br/>'+
        '<input type="number" id="eventduration" value="" /> <br/><br/>'+
+       '<label>Event Category</label><br/><br/>'+
         '<select id="eventcategory" name="category">'+
             '<option value="hackathon">Hackathon</option>'+
               '<option value="birthday">Birthday</option>'+
               '<option value="bar">Bar Mitzvah</option>'+
             '</select>'+
+            '<label>Event Owner</label><br/><br/>'+
             '<br/><br/><select id="eventowner" name="owner">'+
             '<option value="3">Me</option>'+
               '<option value="4">Other</option>'+
