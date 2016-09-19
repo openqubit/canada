@@ -27,7 +27,7 @@ if (Meteor.isClient) {
         }
 
         // Center and zoom the map view onto the current position.
-        firstmap.instance.setCenter(firstmarker.getPosition());
+        //firstmap.instance.setCenter(firstmarker.getPosition());
         firstmap.instance.setZoom(MAP_ZOOM);
       });
     });
